@@ -37,7 +37,6 @@ public class SimpleGUI extends JFrame {
 	public static boolean tr = true;
 	
 	public static void main(String[] args) {
-		
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
