@@ -21,8 +21,9 @@ public class SimpleGUI extends JFrame {
 	public static JTextField textField3;
 	public static String str = "Ответ:  ";
 	public static boolean k = true;
-		
+	
 	public static void main(String[] args) {
+		
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
@@ -47,7 +48,7 @@ public SimpleGUI() {
 		setContentPane(contentPane);
 		
 		textField = new JTextField();
-		textField.setBorder(BorderFactory.createLineBorder (new Color (0, 0, 1, 0), 2));
+		textField.setBorder(BorderFactory.createLineBorder (new Color (0, 0, 0, 0), 2));
 		textField.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		textField.setHorizontalAlignment(SwingConstants.CENTER);
 		textField.setBackground(Color.WHITE);
@@ -56,7 +57,7 @@ public SimpleGUI() {
 		
 		textField2 = new JTextField(5);
 		textField2.setFont(new Font("Tahoma", Font.PLAIN, 20));
-		textField2.setBorder(BorderFactory.createLineBorder (new Color (0, 23, 0, 0), 2));
+		textField2.setBorder(BorderFactory.createLineBorder (new Color (0, 0, 0, 0), 2));
 		textField2.setHorizontalAlignment(SwingConstants.LEFT);
 		textField2.setBackground(Color.WHITE);
 		textField2.setEditable(false);
@@ -94,7 +95,7 @@ public SimpleGUI() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				button5.setVisible(false);
-				textField2.setBorder(BorderFactory.createLineBorder (new Color (0, 56, 0, 0), 2));
+				textField2.setBorder(BorderFactory.createLineBorder (new Color (0, 0, 0, 0), 2));
 				textField2.setText("");
 				str = "Ответ:  ";
 				str = str + Integer.toString(prost.getRandomPrime());
@@ -148,6 +149,20 @@ public SimpleGUI() {
 		});
 		
 		button4.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		
+		JButton button65 = new JButton("привет");
+		button4.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				k=false;
+				button5.setVisible(true);
+				textField2.setBorder(BorderFactory.createLineBorder (Color.BLACK, 1));
+				textField2.setEditable(true);
+			}
+		});
+		
+		button65.setFont(new Font("Tahoma", Font.PLAIN, 15));
+	
 				
 		GroupLayout gl_panel = new GroupLayout(contentPane);
 		gl_panel.setHorizontalGroup(
