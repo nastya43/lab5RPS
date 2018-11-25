@@ -12,7 +12,18 @@ public class SimpleGUI extends JFrame {
 
 	/**
 	 * 
+	 * 
+	 * 
+	 * 
+	 * 
+	 * 
+	 * 
+	 * 
+	 * 
+	 * 
+	 * 
 	 */
+	
 	private static final long serialVersionUID = 1L;
 	public JPanel contentPane;
 	public static JTextField textField;
@@ -20,6 +31,10 @@ public class SimpleGUI extends JFrame {
 	public static JTextField textField3;
 	public static String str = "Ответ:  ";
 	public static boolean k = true;
+	
+	public static boolean ty = true;
+	public static boolean tg = true;
+	public static boolean tr = true;
 	
 	public static void main(String[] args) {
 		
