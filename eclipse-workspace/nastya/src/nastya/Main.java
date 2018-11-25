@@ -6,7 +6,9 @@ import nastya.prost;
  * @author Настя
  * @version 1.0
 */
-	
+
+
+
 public class Main {
 	/** Поле для хранения сгенерированного случайного простого числа */
 	 private static int h = 0;
@@ -21,7 +23,18 @@ public class Main {
 	 	 
 	/** Главная функция. В ней реализован вывод меню и вызов функций класса prost.
 	     **/
-    @SuppressWarnings("resource")
+
+	 static int rtye(int prime) {
+		    boolean k = false;
+		 int   m = 0;
+		    for (int d = 1; !k; d++) {
+		        m = prime + d;
+		        k = false;
+		    }
+		    return m;
+		}
+	 
+	 @SuppressWarnings("resource")
 	public static void main(String[] args) {
     	
     	boolean pr = false;
@@ -67,5 +80,6 @@ public class Main {
             }
         } while (true);
     }
+    
 }
 

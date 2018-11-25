@@ -63,4 +63,15 @@ public class prost {
         return m;
     }
 
+   static int getEx(int prime) {
+       boolean k = false;
+       m = 0;
+       for (int d = 1; !k; d++) {
+           m = prime + d;
+           k = isPrime(m);
+       }
+       return m;
+   }
+
+   
 }
