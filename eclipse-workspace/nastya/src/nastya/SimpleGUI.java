@@ -32,7 +32,7 @@ public class SimpleGUI extends JFrame {
 	public static String str = "Ответ:  ";
 	public static boolean k = true;
 	
-	public static boolean ty =rue;
+	public static boolean ty = true;
 	public static boolean tg = true;
 	public static boolean tr = true;
 	
@@ -57,7 +57,7 @@ public SimpleGUI() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 800, 400);
 		contentPane = new JPanel();
-		contentPane.setBordnew EmptyBorder(5, 5, 5, 5));
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		contentPane.setBackground(Color.WHITE);
 		setContentPane(contentPane);
 		
@@ -67,7 +67,8 @@ public SimpleGUI() {
 		textField.setHorizontalAlignment(SwingConstants.CENTER);
 		textField.setBackground(Color.WHITE);
 		textField.setEditable(false);
-		textField.setColumns(100
+		textField.setColumns(100);
+		
 		textField2 = new JTextField(5);
 		textField2.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		textField2.setBorder(BorderFactory.createLineBorder (new Color (0, 0, 0, 0), 2));
@@ -77,7 +78,7 @@ public SimpleGUI() {
 		textField2.setColumns(100);		
 		
 		
-		JButton button5 = nutton("OK");
+		JButton button5 = new JButton("OK");
 		button5.setVisible(false);
 		button5.addMouseListener(new MouseAdapter() {
 			@Override
@@ -91,7 +92,7 @@ public SimpleGUI() {
 					boolean pr = prost.isPrime(k);
 	                if (pr == true) {
 	                	str = "Число простое." ;
-	                }{
+	                } else {
 	                	str = "Число не простое." ;
 	                }
 									
@@ -115,7 +116,7 @@ public SimpleGUI() {
 				textField.setText(str);
 				textField.requestFocus();
 			}
-
+		});
 		button1.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		
 		JButton button2 = new JButton("Массив простых чисел");
@@ -130,7 +131,8 @@ public SimpleGUI() {
 				int arr[] = prost.getRandomArray(g);
                 for (int d = 0; d < g; d++) {
                 	str = str + Integer.toString(arr[d]) + "  ";          
-                };                textField.setText(str);
+                };
+                textField.setText(str);
 				textField.requestFocus();
 			}
 		});
@@ -145,6 +147,7 @@ public SimpleGUI() {
 				textField2.setBorder(BorderFactory.createLineBorder (Color.BLACK, 1));
 				textField2.setEditable(true);
 			}
+		});
 		
 		button3.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		
@@ -166,7 +169,8 @@ public SimpleGUI() {
 			gl_panel.createParallelGroup(Alignment.LEADING)	
 				.addGroup(gl_panel.createSequentialGroup()	
 						.addGap(150)
-						.addComponent(textField2, GroupLayout.PREFERRED_SIZE, 100, GroupLayout.PREFERRED_SI			.addGap(25)
+						.addComponent(textField2, GroupLayout.PREFERRED_SIZE, 100, GroupLayout.PREFERRED_SIZE)
+						.addGap(25)
 						.addComponent(button5, GroupLayout.PREFERRED_SIZE, 100, GroupLayout.PREFERRED_SIZE))
 				.addGroup(gl_panel.createSequentialGroup()	
 						.addGap(15)
@@ -186,7 +190,7 @@ public SimpleGUI() {
 		);
 		gl_panel.setVerticalGroup(
 			gl_panel.createParallelGroup(Alignment.LEADING)
-				.addGroup(gl_panel.createSequentialG
+				.addGroup(gl_panel.createSequentialGroup()
 						.addGap(15)
 						.addGroup(gl_panel.createParallelGroup(Alignment.LEADING)
 						.addComponent(textField2, GroupLayout.PREFERRED_SIZE, 31, GroupLayout.PREFERRED_SIZE)
@@ -201,7 +205,7 @@ public SimpleGUI() {
 						.addGap(15)
 						.addComponent(button3, GroupLayout.PREFERRED_SIZE, 31, GroupLayout.PREFERRED_SIZE)
 						.addGap(15)
-						.addComponent(button4Layout.PREFERRED_SIZE, 31, GroupLayout.PREFERRED_SIZE))
+						.addComponent(button4, GroupLayout.PREFERRED_SIZE, 31, GroupLayout.PREFERRED_SIZE))
 			
 		);	
 		
@@ -209,3 +213,6 @@ public SimpleGUI() {
 		
 		
 }
+}
+
+
